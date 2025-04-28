@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers at Technivault Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #003366;
+      --accent: #00b4d8;
+      --bg: linear-gradient(to right, #f0f4f8, #ffffff);
+      --white: #ffffff;
+      --text: #222;
+      --muted: #666;
+      --radius: 20px;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --glass: rgba(255, 255, 255, 0.75);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: var(--white);
+      text-align: center;
+      padding: 100px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 300%;
+      background: rgba(255,255,255,0.06);
+      transform: rotate(-15deg);
+      animation: shine 8s linear infinite;
+      top: -50%;
+      left: -50%;
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3.6rem;
+      font-weight: 700;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      margin-top: 15px;
+      color: #d9e6f2;
+      animation: fadeInUp 1s ease;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto 60px;
+      background: var(--glass);
+      border-radius: var(--radius);
+      backdrop-filter: blur(15px);
+      box-shadow: var(--shadow);
+      padding: 50px 40px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      border-left: 6px solid var(--accent);
+      padding-left: 14px;
+      margin: 50px 0 20px;
+    }
+
+    ul {
+      padding-left: 25px;
+      margin-bottom: 30px;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+       
+      justify-content: center;
+      align-content: center;
+      gap: 30px;
+      margin: 20px 0 40px;
+    }
+
+    .logos img {
+      height: 60px;
+      transition: transform 0.5s ease, filter 0.5s ease;
+      
+    }
+
+    .logos img:hover {
+      transform: scale(1.1);
+      filter: grayscale(0%);
+    }
+
+    .location, .contact {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .location h3 {
+      margin-top: 10px;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .contact a {
+      display: inline-flex;
+      align-items: center;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      margin: 12px 20px;
+      transition: 0.3s ease;
+    }
+
+    .contact a img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .contact a:hover img {
+      transform: scale(1.2);
+    }
+
+    button {
+      background: var(--primary);
+      color: var(--white);
+      padding: 16px 42px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      margin: 50px auto 20px;
+      display: block;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+      animation: pulse 2.5s infinite;
+    }
+
+    button:hover {
+      background: var(--accent);
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: var(--primary);
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes shine {
+      0% { transform: rotate(-15deg) translateX(-100%); }
+      100% { transform: rotate(-15deg) translateX(100%); }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.5);
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 12px rgba(0, 180, 216, 0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+
+      .logos {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Technivault Technologies</h1>
+    <p>Kickstart Your Career in Content Writing & Data Entry</p>
+  </header>
+
+  <div class="container">
+    <h2 data-aos="fade-right">Trusted by Leading Brands</h2>
+    <div class="logos" data-aos="zoom-in">
+      <img src="/photo/Bajaj-Allianz.png" alt="Bajaj Allianz" />
+      <img src="/photo/images.jpg" alt="Aditya Birla" />
+      <img src="/photo/cash_connect_cover.jpg" alt="HDFC Bank" />
+      <img src="images/mahindra-finance.webp" alt="Mahindra Finance" />
+      <img src="images/cash_connect_cover.jpg" alt="Cash Connections" />
+    </div>
+
+    <h2 data-aos="fade-up">Job Overview</h2>
+    <ul data-aos="fade-up" data-aos-delay="100">
+      <li>Work involves MS Word (15 days for Article Writing) and MS Excel (15 days for Data Entry).</li>
+      <li>Company based in Mumbai, Maharashtra.</li>
+      <li>Works with BAJAJ Allianz, Aditya Birla, HDFC Bank, Mahindra Finance, Cash Connections.</li>
+      <li>Data provided via PDFs - some copy-paste, some manual typing required.</li>
+      <li>Article writing involves editing Google content into original blogs.</li>
+      <li>Training provided via videos over 2 days.</li>
+    </ul>
+
+    <h2 data-aos="fade-up">Salary & Benefits</h2>
+    <ul data-aos="fade-up" data-aos-delay="100">
+      <li>Monthly Salary: ₹22,500</li>
+      <li>5 working days/week (Sat-Sun off)</li>
+      <li>2 paid leaves/month (extra leave results in salary deduction)</li>
+      <li>Salary via UPI, bank transfer, NEFT, or cheque (no cash)</li>
+    </ul>
+
+    <h2 data-aos="fade-up">Registration & Requirements</h2>
+    <ul data-aos="fade-up" data-aos-delay="100">
+      <li>Refundable security fee: ₹799 (paid before starting)</li>
+      <li>Laptop/Desktop required (rented or provided by company post-registration)</li>
+      <li>Submit ID proof after paying fee</li>
+      <li>Offer letter sent within 30 minutes post-registration</li>
+      <li>Laptop for work use only</li>
+    </ul>
+
+    <h2 data-aos="fade-up">Meet the Founder</h2>
+    <p><strong>Mr. Hardik Soni</strong></p>
+
+    <div class="location" data-aos="fade-up">
+      <h2>Our Office</h2>
+      <h3>
+        Technivault Technologies,<br>
+        2nd Floor, Vikas Apartments, Purushottam Galli, B Wing, Prabhadevi,<br>
+        Mumbai, Maharashtra – 400026
+      </h3>
+    </div>
+
+  
+
+    <div class="contact" data-aos="fade-up">
+      <h2>Need Help?</h2>
+      <p>Connect with us:</p>
+      <a href="https://wa.me/919999999999" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp
+      </a>
+      <a href="https://www.instagram.com/yourcompanyprofile" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Technivault Technologies. All rights reserved.
+  </footer>
+
+  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    const applyBtn = document.getElementById('applyButton');
+    applyBtn.addEventListener('click', () => {
+      applyBtn.textContent = 'Processing...';
+      applyBtn.disabled = true;
+      setTimeout(() => {
+        applyBtn.textContent = 'Apply Now';
+        applyBtn.disabled = false;
+        alert('Thank you! Instructions will be sent to your contact.');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
